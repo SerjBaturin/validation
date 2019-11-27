@@ -1,0 +1,23 @@
+{
+  "name": "validation",
+  "version": "1.0.0",
+  "description": "Forms validation examples",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server --files '*.*'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SerjBaturin/validation.git"
+  },
+  "keywords": [],
+  "author": "Serj Baturin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SerjBaturin/validation/issues"
+  },
+  "homepage": "https://github.com/SerjBaturin/validation#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
