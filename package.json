@@ -4,7 +4,8 @@
   "description": "Forms validation examples",
   "main": "index.js",
   "scripts": {
-    "start": "browser-sync start --server --files '*.*'"
+    "start": "webpack-dev-server --mode development --open --hot",
+    "jsd": "jsdoc index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,10 @@
   },
   "homepage": "https://github.com/SerjBaturin/validation#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7"
+    "jsdoc": "^3.6.3",
+    "path": "^0.12.7",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   }
 }
