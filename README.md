@@ -12,3 +12,12 @@
 - HTML, CSS
 - Regular expressions
 - JSDoc
+- node, npm
+
+### Commits structure
+
+- Docs: docs description
+- Tools: tools description
+- Feat: feature description
+- Ref: refactoring description
+- Strc: project structure description
