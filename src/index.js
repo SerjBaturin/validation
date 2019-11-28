@@ -1,36 +1,45 @@
-import { handlerEmail } from "./inputHandlers"
+import { handlerEmail, handlerPassword } from "./inputHandlers"
+import { messages } from "./messages"
 
 /**
- * Function inputDefine
- * returns active input value
+ * Function defineClickedInput()
+ * defines active input value
+ * returns success & error messages
  *
- * @return String | Number | Boolean
+ * @return String
  */
-
-const inputDefine = () => {
-  // define array of inputs
+const defineClickedInput = () => {
+  // Define array of inputs, error & success message output
   const inputArray = document.getElementsByClassName("form__input")
+  const emailMessage = document.querySelector(".email__message")
+  const passwordMessage = document.querySelector(".password__message")
 
-  // define event handler for active input
+  // Define event handler for active input
   for (let i = 0; i < inputArray.length; i++) {
     inputArray[i].addEventListener("change", () => {
       switch (inputArray[i].name) {
+        // Email message output
         case "email":
           if (handlerEmail(inputArray[i].value) === true) {
-            console.log("EMAIL IS VALID")
+            messages.success(inputArray[i], emailMessage)
           } else {
-            console.log("EMAIL IS INVALID")
+            messages.error(inputArray[i], emailMessage)
           }
           break
+        // Password message output
         case "password":
-          console.log("It's a Password")
+          if (handlerPassword(inputArray[i].value) === true) {
+            messages.success(inputArray[i], passwordMessage)
+          } else {
+            messages.error(inputArray[i], passwordMessage)
+          }
           break
+        // Default
         default:
-          console.log("DEFAULT")
           break
       }
     })
   }
 }
 
-inputDefine()
+defineClickedInput()

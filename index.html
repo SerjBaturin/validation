@@ -9,10 +9,25 @@
     <title>Form Validation</title>
   </head>
   <body>
-    <form class="Form">
-      <input type="text" name="email" class="form__input" required />
-      <input type="text" name="password" class="form__input" required />
-      <input type="submit" />
+    <h2>Login Form</h2>
+    <form class="form login__form">
+      <input
+        type="text"
+        name="email"
+        class="form__input"
+        placeholder="EMAIL"
+        required
+      />
+      <span class="email__message"></span>
+      <input
+        type="text"
+        name="password"
+        class="form__input"
+        placeholder="PASSWORD"
+        required
+      />
+      <span class="password__message"></span>
+      <input type="submit" class="form__btn" />
     </form>
     <script src="dist/bundle.js"></script>
   </body>
