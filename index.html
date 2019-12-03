@@ -9,26 +9,97 @@
     <title>Form Validation</title>
   </head>
   <body>
-    <h2>Login Form</h2>
-    <form class="form login__form">
-      <input
-        type="text"
-        name="email"
-        class="form__input"
-        placeholder="EMAIL"
-        required
-      />
-      <span class="email__message"></span>
-      <input
-        type="text"
-        name="password"
-        class="form__input"
-        placeholder="PASSWORD"
-        required
-      />
-      <span class="password__message"></span>
+    <!-- REGISTRATION FORM -->
+    <h2>Registration Form</h2>
+    <form class="registration__form">
+      <label
+        >Enter your name
+        <input type="text" name="name" />
+      </label>
+      <label>
+        Enter an email
+        <input type="text" name="email" />
+      </label>
+      <label>
+        Confirm an email
+        <input type="text" name="confirm__email" />
+      </label>
+      <label>
+        Enter a password
+        <input type="text" name="password" />
+      </label>
+      <label>
+        Confirm a password
+        <input type="text" name="confirm__password" />
+      </label>
       <input type="submit" class="form__btn" />
     </form>
+
+    <!-- LOGIN FORM -->
+    <h2>Login Form</h2>
+    <form class="login__form">
+      <label>
+        Enter an email
+        <input type="text" name="email" />
+      </label>
+      <label>
+        Enter a password
+        <input type="text" name="password" />
+      </label>
+      <input type="submit" class="form__btn" />
+    </form>
+
+    <!-- COMPLEX FORM -->
+    <h2>Complex Form</h2>
+    <form class="complex__form">
+      <label>
+        Enter your name
+        <input type="text" name="name" />
+      </label>
+      <label>
+        Enter an email
+        <input type="text" name="email" />
+      </label>
+      <label>
+        Enter a password
+        <input type="text" name="password" />
+      </label>
+      <label>
+        Select your gender
+        <input type="radio" name="gender" />M
+        <input type="radio" name="gender" />F
+      </label>
+      <label>
+        Select your age
+        <select name="age">
+          <option value="1">25</option>
+          <option value="2">35</option>
+          <option value="3">45</option>
+          <option value="4">55</option>
+        </select>
+      </label>
+      <label>
+        Select your variants
+        <input type="checkbox" />1 <input type="checkbox" />2
+        <input type="checkbox" />3 <input type="checkbox" />4
+      </label>
+      <label>
+        Select your country
+        <select name="country">
+          <option value="">USA</option>
+          <option value="">Canada</option>
+          <option value="">England</option>
+          <option value="">Russia</option>
+          <option value="">Spain</option>
+        </select>
+      </label>
+      <label>
+        Enter your message
+        <textarea type="text" name="password"></textarea>
+      </label>
+      <input type="submit" class="form__btn" />
+    </form>
+
     <script src="dist/bundle.js"></script>
   </body>
 </html>
