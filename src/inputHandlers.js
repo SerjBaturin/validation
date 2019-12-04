@@ -1,4 +1,20 @@
-import { EMAIL_PATTERN, PASSWORD_PATTERN } from "./patterns"
+import { NAME_PATTERN, EMAIL_PATTERN, PASSWORD_PATTERN } from "./patterns"
+
+/**
+ * Function handlerName
+ * checks user name
+ *
+ * @param {String} - name input value
+ * @return Boolean
+ */
+
+export const handlerName = name => {
+  if (NAME_PATTERN.test(name) === true) {
+    return true
+  } else {
+    return false
+  }
+}
 
 /**
  * Function handlerEmail

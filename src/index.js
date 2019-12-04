@@ -4,9 +4,8 @@ import Form from "./Form"
 /**
  * Function defineForm()
  * defines active form with submit handler
- * returns success or error message
- *
- * @return String
+ * Submit handler makes new Form instance
+ * & calls validate method
  */
 const defineForm = () => {
   const forms = document.getElementsByTagName("form")

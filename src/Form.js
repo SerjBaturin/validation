@@ -1,5 +1,16 @@
 import Input from "./Input"
 
+/**
+ * Class Form
+ * @constructor
+ *
+ * Define & parsing current form
+ * Start submit handler
+ *
+ * @param {String, Number, Boolean} - emails, passwords, check & radio buttons
+ * @return String
+ */
+
 class Form {
   constructor(form) {
     this.form = form
