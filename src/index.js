@@ -1,5 +1,5 @@
-import { handlerEmail, handlerPassword } from "./inputHandlers"
 import Form from "./Form"
+import getTextareaLength from './lib'
 
 /**
  * Function defineForm()
@@ -19,3 +19,4 @@ const defineForm = () => {
 }
 
 defineForm()
+getTextareaLength()

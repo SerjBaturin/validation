@@ -27,9 +27,6 @@ class Input {
     const output = new Output(
       this.input.parentNode.getElementsByTagName("span")[0]
     )
-    const textareaLength = new Output(
-      document.getElementsByClassName("textarea_length")[0]
-    )
     switch (this.input.name) {
       case "name":
         handlerName(this.input.value)
@@ -50,12 +47,6 @@ class Input {
         handlerTextarea(this.input.value)
           ? output.makeOutput(message.getSuccessMessage(), "green")
           : output.makeOutput(message.getErrorMessage(), "red")
-        this.input.addEventListener("keyup", () => {
-          textareaLength.makeOutput(
-            `left ${30 - this.input.value.length} char`,
-            "red"
-          )
-        })
         break
       default:
         break

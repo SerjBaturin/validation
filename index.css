@@ -35,7 +35,7 @@ select {
   margin-left: auto;
 }
 
-.textarea_length {
+#textarea_length {
   margin-left: auto;
   margin-top: -10px;
   margin-bottom: 1em;
