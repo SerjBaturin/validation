@@ -1,4 +1,9 @@
-import { handlerName, handlerEmail, handlerPassword } from "./inputHandlers"
+import {
+  handlerName,
+  handlerEmail,
+  handlerPassword,
+  handlerTextarea
+} from "./inputHandlers"
 import Message from "./Message"
 import Output from "./Output"
 
@@ -22,6 +27,9 @@ class Input {
     const output = new Output(
       this.input.parentNode.getElementsByTagName("span")[0]
     )
+    const textareaLength = new Output(
+      document.getElementsByClassName("textarea_length")[0]
+    )
     switch (this.input.name) {
       case "name":
         handlerName(this.input.value)
@@ -37,6 +45,17 @@ class Input {
         handlerPassword(this.input.value)
           ? output.makeOutput(message.getSuccessMessage(), "green")
           : output.makeOutput(message.getErrorMessage(), "red")
+        break
+      case "textarea":
+        handlerTextarea(this.input.value)
+          ? output.makeOutput(message.getSuccessMessage(), "green")
+          : output.makeOutput(message.getErrorMessage(), "red")
+        this.input.addEventListener("keyup", () => {
+          textareaLength.makeOutput(
+            `left ${30 - this.input.value.length} char`,
+            "red"
+          )
+        })
         break
       default:
         break

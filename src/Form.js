@@ -16,7 +16,7 @@ class Form {
     this.form = form
   }
   parse() {
-    const arr = this.form.getElementsByTagName("input")
+    const arr = this.form.getElementsByClassName("input")
     for (let i = 0; i < arr.length; i++) {
       new Input(arr[i]).validate()
     }

@@ -1,3 +1,14 @@
+/**
+ * Class Output
+ * @constructor
+ *
+ * Node element is output
+ * makeOutput method gets message & color
+ * and changes text and style of message
+ *
+ * @param {String} - node element
+ *
+ */
 class Output {
   constructor(element) {
     this.element = element

@@ -1,4 +1,9 @@
-import { NAME_PATTERN, EMAIL_PATTERN, PASSWORD_PATTERN } from "./patterns"
+import {
+  NAME_PATTERN,
+  EMAIL_PATTERN,
+  PASSWORD_PATTERN,
+  TEXTAREA_PATTERN
+} from "./patterns"
 
 /**
  * Function handlerName
@@ -42,6 +47,22 @@ export const handlerEmail = email => {
 
 export const handlerPassword = password => {
   if (PASSWORD_PATTERN.test(password) === true) {
+    return true
+  } else {
+    return false
+  }
+}
+
+/**
+ * Function handlerTextarea
+ * checks textarea
+ *
+ * @param {String} - textarea input value
+ * @return Boolean
+ */
+
+export const handlerTextarea = textarea => {
+  if (TEXTAREA_PATTERN.test(textarea) === true) {
     return true
   } else {
     return false
