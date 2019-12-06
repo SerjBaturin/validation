@@ -23,7 +23,7 @@ class Input {
   }
 
   validate() {
-    const message = new Message(this.input.name.toUpperCase())
+    const message = new Message(this.input.name)
     const output = new Output(
       this.input.parentNode.getElementsByTagName("span")[0]
     )

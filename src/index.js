@@ -1,5 +1,5 @@
 import Form from "./Form"
-import getTextareaLength from './lib'
+import { getTextareaLength, compareInput } from "./lib"
 
 /**
  * Function defineForm()
@@ -20,3 +20,4 @@ const defineForm = () => {
 
 defineForm()
 getTextareaLength()
+compareInput()

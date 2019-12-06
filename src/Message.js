@@ -13,11 +13,27 @@ class Message {
   }
 
   getSuccessMessage() {
-    return `${this.inputName} is Correct`
+    return `${this.inputName} is correct`
   }
 
   getErrorMessage() {
-    return `${this.inputName} is Incorrect`
+    switch (this.inputName) {
+      case "name":
+        return "Only latin, minimum 2 chars"
+        break
+      case "email":
+        return "Example - mail@mail.com"
+        break
+      case "password":
+        return "Only latin and numbers"
+        break
+      case "textarea":
+        return "Minimum 3 symbols"
+        break
+      default:
+        return `${this.inputName} is incorrect`
+        break
+    }
   }
 }
 
