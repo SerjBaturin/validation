@@ -34,19 +34,27 @@ export function compareInput() {
   secondEmail.addEventListener("change", () => {
     if (firstEmail.value === secondEmail.value) {
       matchedEmail[0].innerHTML = "ok"
+      matchedEmail[0].style.color = "green"
       matchedEmail[1].innerHTML = "ok"
+      matchedEmail[1].style.color = "green"
     } else {
-      matchedEmail[0].innerHTML = "not ok"
-      matchedEmail[1].innerHTML = "not ok"
+      matchedEmail[0].innerHTML = "!"
+      matchedEmail[0].style.color = "red"
+      matchedEmail[1].innerHTML = "!"
+      matchedEmail[1].style.color = "red"
     }
   })
   secondPassword.addEventListener("change", () => {
     if (firstPassword.value === secondPassword.value) {
       matchedPassword[0].innerHTML = "ok"
+      matchedPassword[0].style.color = "green"
       matchedPassword[1].innerHTML = "ok"
+      matchedPassword[1].style.color = "green"
     } else {
-      matchedPassword[0].innerHTML = "not ok"
-      matchedPassword[1].innerHTML = "not ok"
+      matchedPassword[0].innerHTML = "!"
+      matchedPassword[0].style.color = "red"
+      matchedPassword[1].innerHTML = "!"
+      matchedPassword[1].style.color = "red"
     }
   })
 }

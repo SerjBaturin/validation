@@ -44,5 +44,6 @@ select {
 
 .matched-email,
 .matched-password {
+  display: inline-flex;
   margin-left: auto;
 }
